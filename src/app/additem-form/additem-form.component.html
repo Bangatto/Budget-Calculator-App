@@ -1,6 +1,7 @@
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
     <div class="field is-horizontal">
         <div class="field-body">
+
             <div class="field is-narrow">
                 <p class="control">
                     <input type="number" required name="amount" style="width: 100px" class="input" placeholder="Amount" [ngModel]="item.amount">
@@ -14,11 +15,12 @@
             </div>
 
             <div class="field is-narrow">
-                <button type="submit" class="button" [ngClass]="{ 'is-primary': isNewItem, 'isSuccess': !isNewItem}"[disabled]="!itemForm.valid">
+                <button type="submit" class="button" [ngClass]="{ 'is-primary': isNewItem, 'isSuccess': !isNewItem}" [disabled]="!itemForm.valid">
                    <p *ngIf="isNewItem">Add</p> 
                    <p *ngif="!isNewItem">Save</p> 
                 </button>
             </div>
+            
         </div>
     </div>
 </form>

@@ -1,7 +1,6 @@
 import { UpdateEvent } from './../budget-item-list/budget-item-list.component';
 import { BudgetItem } from './../../shared/model/budget-item-model';
 import { Component, OnInit } from '@angular/core';
-import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-main-page',

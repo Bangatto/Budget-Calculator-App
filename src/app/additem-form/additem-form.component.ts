@@ -14,12 +14,14 @@ export class AdditemFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //if item has a value
     if (this.item){
-      //if item has a value this means an existing object has been passed into this component
+      //this means an existing object
+      //has been passed into this component
       this.isNewItem = false;
-      this.item = new BudgetItem('', null);
     }else{
       this.isNewItem = true;
+      this.item = new BudgetItem('', null);
     }
   }
   onSubmit(form: NgForm){
